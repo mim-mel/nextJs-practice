@@ -12,8 +12,6 @@ const EventSearch = props => {
     const selectedYear = yearInputRef.current.value;
     const selectedMonth = monthInputRef.current.value;
 
-    console.log(selectedYear, selectedMonth);
-
     props.onSearch(selectedYear, selectedMonth);
   };
 
@@ -23,8 +21,8 @@ const EventSearch = props => {
         <div className={classes.control}>
           <label htmlFor='year'>Year</label>
           <select id='year' ref={yearInputRef}>
+            <option>2021</option>
             <option>2022</option>
-            <option>2023</option>
           </select>
         </div>
         <div className={classes.control}>
